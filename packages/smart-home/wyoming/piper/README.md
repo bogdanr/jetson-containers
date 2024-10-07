@@ -127,7 +127,7 @@ Got questions? You have several options to get them answered:
 To start the container, you can use [`jetson-containers run`](/docs/run.md) and [`autotag`](/docs/run.md#autotag), or manually put together a [`docker run`](https://docs.docker.com/engine/reference/commandline/run/) command:
 ```bash
 # automatically pull or build a compatible container image
-jetson-containers run $(autotag piper)
+jetson-containers run $(autotag wyoming-piper)
 
 # or if using 'docker run' (specify image and mounts/ect)
 sudo docker run --runtime nvidia -it --rm --network=host piper:35.2.1
@@ -138,11 +138,11 @@ sudo docker run --runtime nvidia -it --rm --network=host piper:35.2.1
 
 To mount your own directories into the container, use the [`-v`](https://docs.docker.com/engine/reference/commandline/run/#volume) or [`--volume`](https://docs.docker.com/engine/reference/commandline/run/#volume) flags:
 ```bash
-jetson-containers run -v /path/on/host:/path/in/container $(autotag piper)
+jetson-containers run -v /path/on/host:/path/in/container $(autotag wyoming-piper)
 ```
 To launch the container running a command, as opposed to an interactive shell:
 ```bash
-jetson-containers run $(autotag piper) my_app --abc xyz
+jetson-containers run $(autotag wyoming-piper) my_app --abc xyz
 ```
 You can pass any options to it that you would to [`docker run`](https://docs.docker.com/engine/reference/commandline/run/), and it'll print out the full command that it constructs before executing it.
 </details>
